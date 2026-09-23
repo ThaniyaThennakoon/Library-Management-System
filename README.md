@@ -61,6 +61,32 @@ The main purpose of this project is to develop a computerized library system tha
 
 Completed as an academic project.
 
+## Screenshots
+
+### Home Page
+![Home Page](Home%20page.png)
+
+### Login Page
+![Login Page](Login%20page.png)
+
+### Admin Dashboard
+![Admin Dashboard](Admindashboard.png)
+
+### Add Books
+![Add Books](Add%20books.png)
+
+### Manage Books
+![Manage Books](Managebooks.png)
+
+### Issue Books
+![Issue Books](Issue%20Books.png)
+
+### Pay Fines
+![Pay Fines](PayFines.png)
+
+### Profile
+![Profile](Profile.png)
+
 ## Author
 
 Thaniya Thennakoon
