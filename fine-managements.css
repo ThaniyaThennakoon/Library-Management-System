@@ -1,0 +1,203 @@
+/* 🌍 GLOBAL STYLES */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    background-color: #071d34;
+    color: #1e293b;
+    padding: 40px 20px;
+    line-height: 1.5;
+}
+
+.admin-container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* 📄 HEADER SECTION */
+.admin-header {
+    text-align: left;
+    margin-bottom: 35px;
+}
+
+.admin-header h1 {
+    font-size: 28px;
+    font-weight: 800;
+    color: #cdd2db;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.text-danger-icon {
+    color: #ef4444;
+}
+
+.admin-header .subtitle {
+    color: #b5b7b9;
+    font-size: 15px;
+    margin-top: 6px;
+}
+
+/* 📊 DASHBOARD CARD & TABLE */
+.admin-card {
+    background: #ffffff;
+    border-radius: 16px;
+    border: 1px solid #e2e8f0;
+    padding: 24px;
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.02), 0 2px 4px -1px rgba(0, 0, 0, 0.01);
+}
+
+.admin-card h3 {
+    font-size: 18px;
+    font-weight: 700;
+    color: #1e293b;
+    margin-bottom: 20px;
+}
+
+.table-responsive {
+    width: 100%;
+    overflow-x: auto;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    text-align: left;
+}
+
+th {
+    background-color: #f1f5f9;
+    color: #475569;
+    padding: 14px 16px;
+    font-weight: 700;
+    font-size: 13px;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    border-bottom: 2px solid #e2e8f0;
+}
+
+th:first-child { border-top-left-radius: 8px; border-bottom-left-radius: 8px; }
+th:last-child { border-top-right-radius: 8px; border-bottom-right-radius: 8px; }
+
+td {
+    padding: 16px;
+    border-bottom: 1px solid #f1f5f9;
+    font-size: 14px;
+    vertical-align: middle;
+}
+
+tr:hover td {
+    background-color: #f8fafc;
+}
+
+/* 🧑‍🎓 STUDENT & BOOK INFO Styles */
+.student-name {
+    font-weight: 700;
+    color: #0f172a;
+}
+
+.student-id {
+    font-size: 12px;
+    color: #94a3b8;
+    margin-top: 2px;
+}
+
+.tbl-book-title {
+    font-weight: 600;
+    color: #334155;
+}
+
+/* ⚠ OVERDUE TEXT */
+.text-danger-bold {
+    color: #dc2626;
+    font-weight: 700;
+}
+
+/* 💳 BUTTON STYLE */
+.btn-collect {
+    background-color: #10b981;
+    color: #ffffff;
+    border: none;
+    padding: 10px 16px;
+    border-radius: 8px;
+    font-family: inherit;
+    font-weight: 600;
+    font-size: 13px;
+    cursor: pointer;
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    transition: all 0.2s ease;
+}
+
+.btn-collect:hover {
+    background-color: #059669;
+    transform: translateY(-1px);
+    box-shadow: 0 4px 12px rgba(16, 185, 129, 0.2);
+}
+
+.btn-collect:active {
+    transform: translateY(0);
+}
+
+/* 📭 NO DATA STYLING */
+.no-data-cell {
+    text-align: center;
+    color: #64748b;
+    padding: 50px !important;
+    font-size: 15px;
+}
+
+.checked-icon {
+    font-size: 26px;
+    color: #16a34a;
+    display: block;
+    margin-bottom: 12px;
+}
+
+
+
+
+.btn-dashboard {
+    background: #5b6470;
+    color: #f8fafc;
+    text-decoration: none;
+    padding: 10px 18px;
+    border-radius: 12px;
+    font-size: 14px;
+    font-weight: 600;
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    transition: all 0.2s ease;
+}
+
+.btn-dashboard:hover {
+    background: #64748b;
+    border-color: var(--primary);
+    box-shadow: 0 4px 12px rgba(52, 73, 66, 0.3);
+    /* මෙතැන transform එකේ අගය වෙනස් කරන්න */
+    transform: translateX(3px); /* වම් පසට නොව දකුණු පසට පොඩි තල්ලුවක් ලැබෙන්න */
+}
+
+/* Header කොටස් දෙක එකම පේළියට ගැනීමට */
+.header-wrapper {
+    display: flex;
+    justify-content: space-between; /* මාතෘකාව වම් පසට සහ බොත්තම දකුණු පසට */
+    align-items: flex-start;        /* දෙකම ඉහළට (top) පෙළගස්වයි */
+    margin-bottom: 20px;
+}
+
+/* දැන් top-nav එකේ තිබූ අනවශ්‍ය ඉඩකඩ ඉවත් කරන්න */
+.top-nav {
+    display: flex;
+    justify-content: flex-end;
+    margin-bottom: 0; /* margin-bottom එක 0 කරන්න */
+    padding-top: 5px; /* අවශ්‍ය නම් ටිකක් පහළට ගැනීමට padding-top එකක් දෙන්න */
+}

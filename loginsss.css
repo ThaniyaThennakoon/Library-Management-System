@@ -1,0 +1,260 @@
+/* ==========================================================================
+   PRESTIGE MODERN LOGIN THEME - ORIGINAL BLUE RETAINED
+   ========================================================================== */
+:root {
+    --primary: #4f46e5;          /* ඔයාගේ Original Royal Indigo/Blue එක එහෙම්මමයි */
+    --primary-hover: #3730a3;
+    --text-dark: #0f172a;        
+    --text-muted: #64748b;       
+    --border-color: #cbd5e1;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    background: #041432;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+}
+.container {
+    width: 100%;
+    max-width: 1000px;
+    z-index: 1;
+}
+
+
+.back-home-btn {
+    position: absolute;
+    top: 25px;
+    left: 25px;
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    color: #f0f2f4; 
+    text-decoration: none;
+    font-size: 14px;
+    font-weight: 800;
+    padding: 8px 16px;
+    border-radius: 6px;
+    background: rgba(142, 159, 187, 0.2);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    transition: all 0.2s ease;
+    z-index: 100;
+}
+
+.back-home-btn:hover, .back-home-btn:active {
+    color: #ffffff;
+    background: rgba(142, 159, 187, 0.2); 
+    border-color: #0751e6;
+}
+
+.login-wrapper {
+    display: flex;
+    background: white;
+    border-radius: 24px;
+    overflow: hidden;
+    box-shadow: 0 25px 50px -12px rgba(15, 23, 42, 0.08);
+    border: 1px solid rgba(255, 255, 255, 0.8);
+    min-height: 560px;
+}
+.left-side {
+    flex: 1.1;
+    display: flex;
+    position: relative;
+    background: #13242c; 
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+}
+
+.login-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    opacity: 0.95; 
+}
+
+.left-side::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(135deg, rgba(15, 32, 39, 0.3) 0%, rgba(32, 58, 67, 0.1) 100%);
+    mix-blend-mode: multiply; 
+    pointer-events: none;
+}
+
+/* ==========================================================================
+   RIGHT LOGIN SIDE
+   ========================================================================== */
+.right-side {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 50px;
+    background: white;
+}
+
+.login-box {
+    width: 100%;
+    max-width: 350px;
+}
+
+/* Logo */
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 1.25rem;
+    font-weight: 800;
+    color: var(--text-dark);
+    margin-bottom: 30px;
+}
+
+.logo-icon {
+    background: var(--primary);
+    color: white;
+    width: 34px;
+    height: 34px;
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 0.95rem;
+}
+
+.brand-accent {
+    color: var(--primary);
+}
+
+/* Headings */
+.login-box h1 {
+    font-size: 2.1rem;
+    font-weight: 800;
+    color: var(--text-dark);
+    letter-spacing: -0.5px;
+    margin-bottom: 6px;
+}
+
+.subtitle {
+    color: var(--text-muted);
+    font-size: 0.9rem;
+    margin-bottom: 35px; /* මෙතන ඉඩ පොඩ්ඩක් වැඩි කරා Username එක එකතු වෙන්නේ නැති වෙන්න */
+}
+
+/* Inputs */
+.input-group {
+    margin-bottom: 22px;
+}
+
+.input-group label {
+    display: block;
+    font-size: 0.85rem;
+    font-weight: 700;
+    color: var(--text-dark);
+    margin-bottom: 8px;
+}
+
+.input-group label i {
+    color: var(--primary);
+    margin-right: 4px;
+}
+
+.input-group input, .password-box input {
+    width: 100%;
+    padding: 13px 16px;
+    border: 1.5px solid #e2e8f0;
+    border-radius: 12px;
+    font-family: inherit;
+    font-size: 0.95rem;
+    color: var(--text-dark);
+    outline: none;
+    transition: all 0.2s ease;
+}
+
+.input-group input:focus, .password-box input:focus {
+    border-color: var(--primary);
+    box-shadow: 0 0 0 4px rgba(79, 70, 229, 0.08);
+}
+
+.password-box {
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+
+.password-box i {
+    position: absolute;
+    right: 16px;
+    color: var(--text-muted);
+    cursor: pointer;
+    font-size: 1.05rem;
+}
+
+.password-box i:hover {
+    color: var(--primary);
+}
+
+/* Login Button */
+.login-btn {
+    width: 100%;
+    background: #0f172a; 
+    color: white;
+    border: none;
+    padding: 14px;
+    border-radius: 12px;
+    font-family: inherit;
+    font-size: 1rem;
+    font-weight: 700;
+    cursor: pointer;
+    margin-top: 25px;
+    transition: all 0.2s ease;
+}
+
+.login-btn:hover {
+    background-color: #1e293b;
+    box-shadow: 0 5px 15px rgba(79, 70, 229, 0.2);
+}
+
+/* Bottom Links */
+.links {
+    margin-top: 25px;
+    text-align: center;
+    font-size: 0.85rem;
+}
+
+.links p {
+    color: var(--text-muted);
+    margin-top: 8px;
+}
+
+.links a {
+    text-decoration: none;
+    font-weight: 600;
+}
+
+.forgot-link { color: var(--text-muted); }
+.forgot-link:hover { color: var(--text-dark); }
+.reg-link { color: var(--primary); }
+.reg-link:hover { color: var(--primary-hover); }
+
+/* RESPONSIVE DESIGN */
+@media (max-width: 850px) {
+    .left-side {
+        display: none;
+    }
+    .right-side {
+        padding: 40px 20px;
+    }
+}

@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Library Login</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="loginsss.css">
+    
+</head>
+
+<body>
+    <a href="home.php" class="back-home-btn">
+    <i class="fa-solid fa-arrow-left"></i> Back to Home
+</a>
+
+<div class="container">
+    <div class="login-wrapper">
+
+        <div class="left-side">
+            <img src="library1.jpg" alt="Library Illustration" class="login-img">
+        </div>
+
+        <div class="right-side">
+            <div class="login-box">
+
+                <div class="logo">
+                    <div class="logo-icon">
+                        <i class="fa-solid fa-book-open-reader"></i>
+                    </div>
+                    <span>Library<span class="brand-accent">MS</span></span>
+                </div>
+
+                <h1>Welcome Back</h1>
+                <p class="subtitle">Please log in to continue</p>
+
+                <form action="login.php" method="POST">
+
+                    <div class="input-group">
+                        <label><i class="fa-regular fa-user"></i> Username</label>
+                        <input type="text" name="username" placeholder="Enter Username" required>
+                    </div>
+
+                    <div class="input-group">
+                        <label><i class="fa-regular fa-square-check"></i> Password</label>
+                        <div class="password-box">
+                            <input type="password" id="password" name="password" placeholder="Enter Password" required>
+                            <i class="fa-regular fa-eye" id="togglePassword"></i>
+                        </div>
+                    </div>
+
+                    <button type="submit" name="login" class="login-btn">Login</button>
+
+                </form>
+
+                <div class="links">
+                    <a href="forgot_password.php" class="forgot-link">Forgot Password?</a>
+                    <p>Don't have an account? <a href="signup.php" class="reg-link">Register</a></p>
+                </div>
+
+            </div>
+        </div>
+
+    </div>
+</div>
+
+<script>
+const password = document.getElementById("password");
+const togglePassword = document.getElementById("togglePassword");
+
+togglePassword.addEventListener("click", function () {
+    if (password.type === "password") {
+        password.type = "text";
+        togglePassword.classList.remove("fa-eye");
+        togglePassword.classList.add("fa-eye-slash");
+    } else {
+        password.type = "password";
+        togglePassword.classList.remove("fa-eye-slash");
+        togglePassword.classList.add("fa-eye");
+    }
+});
+</script>
+
+</body>
+</html>

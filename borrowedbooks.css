@@ -1,0 +1,141 @@
+
+/* ==========================================================================
+   1. PREMIUM HIGH-CONTRAST VARIABLES (Match with Catalog Theme)
+   ========================================================================== */
+:root {
+    --primary: #4f46e5;          /* Professional Indigo */
+    --primary-hover: #4338ca;
+    --reserve-color: #f97316;    /* Soft Orange */
+    
+    /* 🎨 Image 826fa6 එකට ගැලපෙන්න හදපු සුපිරි වර්ණ */
+    --bg-portal: #e2e8f0;        /* මුළු පිටුවේම පසුබිම (Soft Gray-Blue) */
+    --navbar-bg: #0f172a;        /* Navigation එකට දුන් සුපිරි තද Slate Blue වර්ණය */
+    --card-bg: #ffffff;          /* පිරිසිදු සුදු කාඩ්පත් (පසුබිම තද නිසා මේවා මරුට කැපී පෙනේ) */
+    
+    --text-main: #0f172a;        /* ඉතා තද Slate වර්ණය */
+    --text-muted: #475569;       /* කියවිය හැකි තද අළු පාට */
+    --text-light: #ffffff;       /* නාවික බාර් එකේ අකුරු සදහා */
+    --border-color: #cbd5e1;     /* පැහැදිලිව පෙනෙන බෝඩර්ස් */
+    
+    --success-bg: #dcfce7;
+    --success-text: #15803d;
+}
+
+* {
+    margin: 0; padding: 0; box-sizing: border-box;
+    font-family: 'Plus Jakarta Sans', sans-serif;
+}
+
+body {
+    background-color: var(--bg-portal);
+    color: var(--text-main);
+    min-height: 100vh;
+    padding-top: 100px; /* Space for Sticky Top Navbar */
+}
+
+.catalog-container {
+    max-width: 1200px; /* 1100px සිට 1200px දක්වා පළල් කළා ටේබල් එක ලස්සනට පේන්න */
+    margin: 0 auto; 
+    width: 100%; 
+    padding: 0 20px 40px 20px;
+}
+
+/* ==========================================================================
+   2. STICKY TOP NAVIGATION BAR (MATCHES CATALOG PERFECTLY)
+   ========================================================================== */
+.portal-navbar {
+    position: fixed; 
+    top: 0; left: 0; width: 100%;
+    background-color: var(--navbar-bg); /* අර පේජ් එකේ වගේම තද වර්ණය */
+     
+    z-index: 1000;border-bottom: 3px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+.nav-container {
+    max-width: 1200px; margin: 0 auto; padding: 16px 20px;
+    display: flex; justify-content: space-between; align-items: center;
+}
+
+.nav-logo {
+    display: flex; align-items: center; gap: 10px; font-size: 20px; font-weight: 800; color: var(--text-light);
+}
+.nav-logo i { color: #818cf8; }
+
+.nav-links { display: flex; gap: 12px; }
+
+.nav-item {
+    text-decoration: none; color: #94a3b8; font-weight: 600; font-size: 14px;
+    padding: 8px 16px; border-radius: 8px; transition: all 0.2s ease;
+    display: inline-flex; align-items: center; gap: 8px;
+}
+
+.nav-item:hover { color: var(--text-light); background: rgba(255, 255, 255, 0.1); }
+.nav-item.active { color: white; background: var(--primary); }
+
+/* ==========================================================================
+   3. HEADER STYLES
+   ========================================================================== */
+.catalog-header {
+    text-align: left; /* මැදට තිබ්බ එක වමට කළා Dashboard එකට ගැළපෙන්න */
+    margin-top: 20px;
+    margin-bottom: 30px; 
+    border-bottom: 2px solid var(--border-color);
+    padding-bottom: 15px;
+}
+.catalog-header h1 { font-size: 32px; font-weight: 800; color: var(--text-main); }
+.catalog-header .subtitle { color: var(--text-muted); font-size: 15px; margin-top: 4px; }
+
+/* ==========================================================================
+   4. PROFESSIONAL BORROWS LIST TABLE (HIGH CONTRAST)
+   ========================================================================== */
+.dashboard-card {
+    background: var(--card-bg); 
+    border: 1px solid var(--border-color); 
+    border-radius: 14px;
+    padding: 30px; 
+    box-shadow: 0 4px 12px rgba(15, 23, 42, 0.08);
+}
+.dashboard-card h3 { font-size: 20px; margin-bottom: 20px; font-weight: 800; color: var(--text-main); }
+
+.table-responsive { width: 100%; overflow-x: auto; }
+table { width: 100%; border-collapse: collapse; text-align: left; }
+
+/* මැඩම්ට පැහැදිලිව පෙනෙන්න Table Header එක තද කළා */
+th { 
+    background-color: #2b4d83; /* තද Slate Gray */
+    color: white;              /* සුදු පැහැති අකුරු */
+    font-weight: 700; 
+    padding: 16px;
+    font-size: 14px;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+td { padding: 16px; border-bottom: 1px solid #cbd5e1; font-size: 14px; color: var(--text-main); }
+
+/* Table එක ඇතුලේ ලස්සනට පේන්න Row Hover එකක් දැම්මා */
+tr:hover td {
+    background-color: #f8fafc;
+}
+
+.tbl-book-title { font-weight: 800; color: var(--text-main); font-size: 15px; }
+.tbl-book-author { font-size: 13px; color: var(--text-muted); margin-top: 2px; font-weight: 500; }
+
+/* Status Labels & Badges */
+.badge-status { padding: 5px 12px; border-radius: 20px; font-size: 11px; font-weight: 700; text-transform: uppercase; display: inline-block; }
+.badge-status.approved { background: var(--success-bg); color: var(--success-text); }
+.badge-status.reserved { background: #ffedd5; color: #c2410c; border: 1px solid #fed7aa; }
+.badge-status.overdue { background: #fee2e2; color: #dc2626; border: 1px solid #fca5a5; }
+
+.badge-type { padding: 4px 10px; border-radius: 6px; font-size: 12px; font-weight: 700; display: inline-block; text-transform: uppercase; }
+.badge-type.borrow { background: #e0f2fe; color: #0369a1; border: 1px solid #bae6fd; }
+.badge-type.reserve { background: #fef3c7; color: #b45309; border: 1px solid #fde68a; }
+
+.text-danger-bold { color: #dc2626; font-weight: 800; }
+
+/* Action Fine Buttons & Labels */
+.fine-badge { font-size: 12px; font-weight: 700; padding: 6px 14px; border-radius: 6px; display: inline-flex; align-items: center; gap: 6px; text-decoration: none; transition: background 0.2s, transform 0.1s; }
+.fine-none { background: #f1f5f9; color: #64748b; border: 1px solid #e2e8f0; }
+.fine-active { background: #fee2e2; color: #b91c1c; border: 1px solid #fca5a5; cursor: pointer; }
+.fine-active:hover { background: #ef4444; color: white; transform: scale(1.03); }

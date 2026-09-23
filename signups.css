@@ -1,0 +1,186 @@
+/* --- Reset & Font --- */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* --- Gradient Background  */
+body {
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #041432;
+   
+    padding: 20px;
+}
+/* --- Main Container --- */
+.signup-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+
+/* --- Clean Form Card  */
+.signup-box {
+    background-color: #ffffff;
+    border-radius: 20px;
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.08);
+    width: 100%;
+    max-width: 480px; 
+    padding: 40px;
+}
+
+/* --- Brand Logo (LibraryMS) --- */
+.brand-logo {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    color: #4f46e5;
+    font-weight: 700;
+    font-size: 18px;
+    margin-bottom: 20px;
+}
+
+/* --- Headings --- */
+.signup-box h2 {
+    color: #0f172a;
+    font-size: 26px;
+    font-weight: 700;
+    margin-bottom: 6px;
+    text-align: center;
+}
+
+.subtitle {
+    color: #64748b;
+    font-size: 14px;
+    margin-bottom: 25px;
+    text-align: center;
+}
+
+/* --- Input Boxes --- */
+.input-box {
+    margin-bottom: 16px;
+    display: flex;
+    flex-direction: column;
+}
+
+.input-box label {
+    font-size: 13px;
+    font-weight: 600;
+    color: #334155;
+    margin-bottom: 6px;
+}
+
+.input-box label i {
+    margin-right: 5px;
+    color: #6366f1; 
+}
+
+.input-box input {
+    width: 100%;
+    padding: 11px 14px;
+    border: 1px solid #cbd5e1;
+    border-radius: 8px;
+    font-size: 14px;
+    outline: none;
+    transition: all 0.2s;
+}
+
+
+.input-box input:focus {
+    border-color: #6366f1;
+    box-shadow: 0 0 0 3px rgba(99, 102, 241, 0.15);
+}
+
+/* --- Password Settings --- */
+.password-container {
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+
+#togglePassword {
+    position: absolute;
+    right: 14px;
+    cursor: pointer;
+    color: #94a3b8;
+}
+
+/* --- Strength Bar --- */
+.strength-container {
+    background: #f1f5f9;
+    height: 5px;
+    margin-top: 6px;
+    border-radius: 3px;
+    overflow: hidden;
+}
+
+#strength-bar {
+    height: 100%;
+    width: 0%;
+    transition: all 0.3s ease;
+}
+
+#strength-text {
+    font-size: 11px;
+    margin-top: 4px;
+    font-weight: 500;
+}
+
+/* --- Register Button  */
+button[type="submit"] {
+    background-color: #0f172a; 
+    color: white;
+    padding: 12.5px;
+    border: none;
+    border-radius: 8px;
+    font-size: 15px;
+    font-weight: 600;
+    cursor: pointer;
+    width: 100%;
+    margin-top: 15px;
+    transition: background 0.2s;
+}
+
+button[type="submit"]:hover:not(:disabled) {
+    background-color: #1e293b;
+}
+
+/* --- Success Message --- */
+.success-message {
+    background-color: #d1fae5;
+    color: #065f46;
+    padding: 12px;
+    border-radius: 8px;
+    border: 1px solid #a7f3d0;
+    font-size: 14px;
+    font-weight: 600;
+    margin-bottom: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+}
+
+
+.login-link {
+    text-align: center;
+    font-size: 13.5px;
+    color: #64748b;
+    margin-top: 20px;
+}
+
+.login-link a {
+    color: #4f46e5;
+    text-decoration: none;
+    font-weight: 600;
+}
+
+.login-link a:hover {
+    text-decoration: underline;
+}

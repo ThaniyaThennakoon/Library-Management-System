@@ -1,0 +1,307 @@
+:root {
+    /* 🌟 වයිවා එකටම ගැලපෙන සුපිරිම කලර් පැලට් එක */
+    --primary: #4f46e5;          /* Sophisticated Indigo */
+    --primary-hover: #4338ca;
+    --reserve-color: #f97316;    /* Soft Orange */
+    
+    /* 🎨 සුදු ගතිය සහ මැකී පෙනෙන ගතිය සම්පූර්ණයෙන්ම ඉවත් කළ වර්ණ */
+    --bg-portal: #e2e8f0;        /* මුළු පිටුවේම පසුබිම (පැහැදිලි Soft Gray-Blue පසුබිමක්) */
+    --navbar-bg: #0f172a;       /* 🌟 Navigation එකට දුන් සුපිරි තද Slate Blue වර්ණය */
+    --hero-bg: linear-gradient(135deg, #1e1b4b 0%, #312e81 100%); /* Hero section එකට තද බ්ලූ/ඉන්ඩිගෝ වර්ණයක් */
+    --card-bg: #ffffff;          /* පිරිසිදු සුදු කාඩ්ස් (දැන් පසුබිම තද නිසා මේවා සුපිරියට කැපිලා පේනවා) */
+    
+    --text-main: #0f172a;        /* ඉතා තද Slate වර්ණය (අකුරු ඈතටම කියවන්න ලේසියි) */
+    --text-muted: #475569;       /* ලා අළු වෙනුවට කියවිය හැකි තද අළු පාට */
+    --text-light: #ffffff;       /* හීරෝ සෙක්ෂන් එක ඇතුලේ අකුරු සදහා */
+    --border-color: #cbd5e1;     /* බෝඩර්ස් ඉතා පැහැදිලිව පෙනෙන්න තද කළා */
+    
+    --success-bg: #dcfce7;
+    --success-text: #15803d;
+    --error-bg: #fee2e2;
+    --error-text: #b91c1c;
+}
+
+* {
+    margin: 0; padding: 0; box-sizing: border-box;
+    font-family: 'Plus Jakarta Sans', sans-serif;
+}
+
+body {
+    background-color: var(--bg-portal);
+    color: var(--text-main);
+    min-height: 100vh;
+    padding-top: 90px; /* Space for Sticky Navbar */
+}
+
+.catalog-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    width: 100%;
+    padding: 0 20px 40px 20px;
+}
+
+/* ==========================================================================
+   2. STICKY TOP NAVIGATION BAR (NEW DARK & PROFESSIONAL)
+   ========================================================================== */
+.portal-navbar {
+    position: fixed;
+    top: 0; left: 0; width: 100%;
+    background-color: var(--navbar-bg); /* අලුත්ම තද වර්ණය */
+    
+    z-index: 1000;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+.nav-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 16px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.nav-logo {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 20px;
+    font-weight: 800;
+    color: var(--text-light);
+}
+.nav-logo i { color: #818cf8; }
+
+.nav-links {
+    display: flex;
+    gap: 12px;
+}
+
+.nav-item {
+    text-decoration: none;
+    color: #94a3b8;
+    font-weight: 600;
+    font-size: 14px;
+    padding: 8px 16px;
+    border-radius: 8px;
+    transition: all 0.2s ease;
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.nav-item:hover {
+    color: var(--text-light);
+    background: rgba(255, 255, 255, 0.1);
+}
+
+.nav-item.active {
+    color: white;
+    background: var(--primary);
+}
+
+/* ==========================================================================
+   3. HERO SECTION (DARK BEAUTIFUL GRADIENT)
+   ========================================================================== */
+.catalog-header {
+    text-align: center;
+    margin: 30px 0;
+    padding: 45px 30px;
+    background: var(--hero-bg);
+    border-radius: 16px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    box-shadow: 0 10px 25px rgba(30, 27, 75, 0.15);
+}
+
+.catalog-header h1 {
+    font-size: 36px;
+    font-weight: 800;
+    color: var(--text-light);
+    text-shadow: 0 2px 4px rgba(0,0,0,0.2);
+}
+
+.catalog-header .subtitle {
+    color: #cbd5e1;
+    font-size: 15px;
+    margin-top: 8px;
+    margin-bottom: 25px;
+}
+
+/* SEARCH & FILTER FORM INSIDE HERO */
+.search-filter-form {
+    width: 100%;
+    max-width: 800px;
+}
+
+.search-inputs-wrapper {
+    display: flex;
+    gap: 12px;
+    background: rgba(255, 255, 255, 0.15); 
+    backdrop-filter: blur(8px);
+    padding: 10px;
+    border-radius: 14px;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    align-items: center;
+}
+
+.input-box {
+    display: flex;
+    align-items: center;
+    background: var(--text-light);
+    padding: 0 15px;
+    border-radius: 8px;
+    flex: 1;
+    border: 2px solid transparent;
+}
+
+.input-box:focus-within {
+    border-color: #818cf8;
+}
+
+.input-box i {
+    color: #64748b;
+    margin-right: 10px;
+}
+
+.input-box input, .input-box select {
+    border: none;
+    background: transparent;
+    width: 100%;
+    padding: 12px 0;
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    font-size: 14px;
+    color: #0f172a;
+    outline: none;
+    font-weight: 500;
+}
+
+.btn-search-submit {
+    background: #6366f1;
+    color: white;
+    border: none;
+    padding: 12px 25px;
+    border-radius: 8px;
+    font-weight: 700;
+    font-size: 14px;
+    cursor: pointer;
+    transition: background 0.2s;
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.btn-search-submit:hover {
+    background: var(--primary-hover);
+}
+
+.btn-clear-search {
+    background: #ef4444;
+    color: white;
+    text-decoration: none;
+    padding: 12px 20px;
+    border-radius: 8px;
+    font-weight: 700;
+    font-size: 14px;
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    transition: background 0.2s;
+}
+
+.btn-clear-search:hover {
+    background: #dc2626;
+}
+
+/* ==========================================================================
+   4. HIGH-CONTRAST CARDS DESIGN
+   ========================================================================== */
+.results-meta {
+    margin-bottom: 15px;
+    font-weight: 700;
+    color: var(--text-main);
+    font-size: 15px;
+}
+
+.books-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    gap: 25px;
+}
+
+.book-card {
+    background-color: var(--card-bg);
+    border: 1px solid var(--border-color);
+    border-radius: 14px;
+    padding: 22px;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    box-shadow: 0 4px 10px rgba(15, 23, 42, 0.08); /* ලස්සන Soft හෙවනැල්ලක් */
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.book-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 10px 20px rgba(15, 23, 42, 0.12);
+}
+
+.card-badge {
+    position: absolute; top: 22px; right: 22px;
+    background: #eef2ff; padding: 4px 10px; border-radius: 6px;
+    font-size: 11px; font-weight: 700; color: var(--primary);
+    border: 1px solid #c7d2fe;
+}
+
+.book-icon-wrapper {
+    width: 40px; height: 40px; background: #eef2ff;
+    border-radius: 8px; display: flex; align-items: center; justify-content: center;
+    font-size: 16px; color: var(--primary); margin-bottom: 15px;
+}
+
+.book-title { font-size: 17px; font-weight: 800; color: var(--text-main); margin-bottom: 4px; }
+.book-author { font-size: 13px; color: var(--text-muted); font-weight: 500; margin-bottom: 20px; }
+
+.card-footer {
+    border-top: 1px solid #e2e8f0; 
+    padding-top: 15px; margin-top: auto;
+}
+
+.status-badge { display: inline-flex; align-items: center; gap: 6px; font-size: 13px; font-weight: 700; }
+.status-badge.available { color: #16a34a; }
+.status-badge.out-of-stock { color: #dc2626; }
+
+/* ACTION BUTTONS */
+.btn-borrow, .btn-reserve {
+    border: none; padding: 12px; border-radius: 8px;
+    font-weight: 700; font-size: 13px; cursor: pointer;
+    display: flex; align-items: center; justify-content: center; gap: 6px;
+    width: 100%; margin-top: 12px; color: white;
+}
+.btn-borrow { background: var(--primary); }
+.btn-borrow:hover { background: var(--primary-hover); }
+.btn-reserve { background: var(--reserve-color); }
+.btn-reserve:hover { background: #ea580c; }
+
+/* ==========================================================================
+   5. INFO BOX STATES
+   ========================================================================== */
+.info-state-box {
+    display: flex; flex-direction: column; align-items: center; text-align: center;
+    padding: 50px; background: var(--card-bg); border: 2px dashed var(--border-color);
+    border-radius: 14px; width: 100%;
+}
+.info-state-box i { font-size: 45px; color: var(--primary); margin-bottom: 15px; }
+.info-state-box h3 { font-size: 19px; font-weight: 700; margin-bottom: 6px; }
+.info-state-box p { color: var(--text-muted); font-size: 14px; max-width: 400px; }
+
+@media (max-width: 768px) {
+    .search-inputs-wrapper {
+        flex-direction: column;
+        align-items: stretch;
+    }
+    .btn-search-submit, .btn-clear-search {
+        justify-content: center;
+        width: 100%;
+    }
+}

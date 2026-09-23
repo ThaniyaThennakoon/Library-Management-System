@@ -1,0 +1,199 @@
+/* ==========================================================================
+   1. GLOBAL RESET & VARIABLES
+   ========================================================================== */
+:root {
+    --primary: #10b981;          /* Premium Emerald Green */
+    --primary-hover: #059669;
+    --bg-dark: #111827;          /* Premium Dark Background */
+    --card-bg: #ffffff;          
+    --text-main: #1e293b;
+    --text-muted: #64748b;
+    --border-color: #e2e8f0;
+    --error: #ef4444;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Plus Jakarta Sans', sans-serif;
+}
+
+body {
+    background-color: var(--bg-dark);
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    padding: 40px 20px;
+}
+
+.page-container {
+    width: 100%;
+    max-width: 900px; /* Table එක ලස්සනට පේන්න width එක වැඩි කලා */
+}
+
+/* 👑 DASHBOARD BACK BUTTON */
+.top-nav {
+    width: 100%;
+    display: flex;
+    justify-content: flex-start;
+    margin-bottom: 20px;
+}
+
+.btn-dashboard {
+    background: #5b6470;
+    color: #f8fafc;
+    text-decoration: none;
+    padding: 10px 18px;
+    border-radius: 12px;
+    font-size: 14px;
+    font-weight: 600;
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    transition: all 0.2s ease;
+}
+
+.btn-dashboard:hover {
+    background: #64748b;
+    border-color: var(--primary);
+    box-shadow: 0 4px 12px rgba(16, 185, 129, 0.3);
+    transform: translateX(-3px);
+}
+
+/* ==========================================================================
+   2. PREMIUM CARD LAYOUT
+   ========================================================================== */
+.premium-card {
+    background: var(--card-bg);
+    padding: 40px;
+    border-radius: 24px;
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
+}
+
+.card-header {
+    text-align: center;
+    margin-bottom: 35px;
+}
+
+.card-header .icon-box {
+    background: rgba(16, 185, 129, 0.1);
+    color: var(--primary);
+    width: 60px;
+    height: 60px;
+    border-radius: 16px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 24px;
+    margin-bottom: 15px;
+}
+
+.card-header h1 {
+    font-size: 26px;
+    font-weight: 800;
+    color: var(--text-main);
+    letter-spacing: -0.5px;
+    margin-bottom: 6px;
+}
+
+.card-header p {
+    font-size: 14px;
+    color: var(--text-muted);
+}
+
+/* ==========================================================================
+   3. PREMIUM TABLE DESIGN
+   ========================================================================== */
+.premium-table {
+    width: 100%;
+    border-collapse: collapse;
+    text-align: left;
+    font-size: 14px;
+}
+
+.premium-table th {
+    padding: 16px;
+    background: #f8fafc;
+    color: var(--text-main);
+    font-weight: 700;
+    border-bottom: 2px solid var(--border-color);
+}
+
+.premium-table td {
+    padding: 16px;
+    color: var(--text-main);
+    border-bottom: 1px solid var(--border-color);
+    vertical-align: middle;
+}
+
+/* User identity alignment */
+.user-info {
+    display: flex;
+    flex-direction: column;
+}
+.user-info .username {
+    font-weight: 700;
+    color: var(--text-main);
+}
+.user-info .userid {
+    font-size: 12px;
+    color: var(--text-muted);
+}
+
+/* Status Badges */
+.badge {
+    padding: 6px 12px;
+    border-radius: 8px;
+    font-size: 12px;
+    font-weight: 700;
+    display: inline-block;
+}
+.badge-active {
+    background: #d1fae5;
+    color: #059669;
+}
+.badge-overdue {
+    background: #fee2e2;
+    color: #ef4444;
+}
+
+/* Helper Text classes */
+.text-danger {
+    color: var(--error);
+}
+.font-bold {
+    font-weight: 700;
+}
+.no-data {
+    text-align: center;
+    padding: 30px !important;
+    color: var(--text-muted);
+    font-weight: 500;
+}
+
+/* ==========================================================================
+   4. RETURN ACTION BUTTON
+   ========================================================================== */
+.btn-return {
+    background: #1e293b;
+    color: white;
+    border: none;
+    padding: 8px 16px;
+    border-radius: 10px;
+    font-size: 13px;
+    font-weight: 700;
+    cursor: pointer;
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    transition: all 0.2s;
+}
+
+.btn-return:hover {
+    background: var(--primary);
+    box-shadow: 0 4px 10px rgba(16, 185, 129, 0.3);
+}
